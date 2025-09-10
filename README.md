@@ -72,19 +72,27 @@ Exercise 4 – Conceptual Knowledge
 Uses labeled data.
 Examples: Logistic Regression, KNN.
 
-Applications: spam detection, price prediction, medical diagnosis.
+Applications:
+spam detection
+price prediction
+medical diagnosis
 
 # Unsupervised Learning
 
 Uses unlabeled data.
 Example: K-Means.
 
-Applications: customer segmentation, anomaly detection.
+Applications:
+customer segmentation
+anomaly detection.
 
 # Reinforcement Learning
 
 Learns from feedback/rewards.
-Applications: robotics, game AI, self-driving cars.
+Applications:
+robotics
+game AI
+self-driving cars.
 
 # Why Train-Test Split?
 
