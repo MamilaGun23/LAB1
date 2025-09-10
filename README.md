@@ -1,90 +1,102 @@
-# Perceptron Lab
+# Lab 1 – Machine Learning Basics (Iris Dataset)
 
-## Overview
-This lab is based on the perceptron learning algorithm, one of the earliest supervised learning models for binary classification. The notebook implements a perceptron from scratch, applies it to datasets, and analyzes its behavior during training and testing.
-
-In this hands-on lab, you will:
-
-- Implement the perceptron learning algorithm in Python.
-- Train the perceptron on different datasets.
-- Visualize decision boundaries.
-- Evaluate classification performance and convergence behavior.
+This lab introduces the **fundamentals of machine learning** using the **Iris dataset**.  
+It covers **supervised learning**, **unsupervised learning**, and **core ML concepts**.
 
 ---
 
-## Objectives
-- Understand how the perceptron updates its weights based on misclassifications.
-- Explore the role of learning rate and epochs in convergence.
-- Visualize decision regions in 2D feature space.
-- Compare performance on linearly separable vs. non-separable data.
+##  Setup
 
----
+Install required libraries:
 
-## Prerequisites
-- Python 3.x  
-- Libraries: `numpy`, `matplotlib`, `pandas`, `scikit-learn`  
-
-# Perceptron Lab
-
-## Install Dependencies
 ```bash
-pip install numpy matplotlib pandas scikit-learn
+pip install numpy pandas matplotlib scikit-learn
+
 ```
 
-## Setup
-```bash
-# Clone this repository
-git clone <repo-url>
+# 🌸 Iris Dataset
 
-# Navigate to the lab directory
-cd perceptron-lab
+Features: sepal length, sepal width, petal length, petal width
+Target: species (Setosa, Versicolor, Virginica)
+A small, well-balanced dataset ideal for learning ML basics.
 
-# Launch Jupyter
-jupyter notebook
-```
-Open **LAB1.ipynb** and run the cells.
+ Exercise 1 – Import Libraries
 
----
+NumPy, Pandas → Data handling
+Matplotlib → Visualization
+scikit-learn → ML models
 
-## Part 1: Perceptron Implementation
-- Define the perceptron class with methods for initialization, training (`fit`), and prediction.  
-- Update weights iteratively using the perceptron rule.
+ Exercise 2 – Logistic Regression (Supervised Learning)
 
----
+Steps:
+Load the Iris dataset.
+Perform train-test split (80% train, 20% test).
+Train a Logistic Regression classifier.
+Evaluate using accuracy and classification report.
 
-## Part 2: Training on a Dataset
-- Apply the perceptron to synthetic or real datasets (e.g., Iris dataset features).  
-- Visualize decision regions and track misclassification errors across epochs.
+# Key Insight
 
----
+Logistic Regression is used for classification, not regression.
+It models probabilities with a sigmoid/logit function.
 
-## Part 3: Analysis Questions
-### Convergence Behavior
-- The perceptron converges when the data is **linearly separable**.  
-- If the data is not linearly separable, the algorithm may fail to converge, cycling indefinitely with errors.  
+Exercise 2 (Part B) – K-Means Clustering (Unsupervised Learning)
 
-### Effect of Learning Rate (η)
-- A very small learning rate slows convergence significantly.  
-- A very large learning rate can overshoot and prevent convergence.  
-- Moderate values (e.g., 0.01 or 0.1) typically balance stability and speed.  
+Steps:
 
-### Decision Boundaries
-- For linearly separable data, the perceptron finds a hyperplane that separates the classes.  
-- For non-separable data, the decision boundary oscillates and misclassifications persist.  
+Apply K-Means with 3 clusters.
+Assign each flower to a cluster.
+Visualize and compare with true species labels.
 
-### Limitations
-- The perceptron cannot handle non-linearly separable problems (e.g., XOR).  
-- It is sensitive to feature scaling.  
-- Convergence is not guaranteed unless the dataset is separable.  
+# Key Insight
 
----
+K-Means groups data based on similarities.
+Does not use target labels during training.
 
-## About
-This lab demonstrates the perceptron learning algorithm as an introduction to supervised learning and linear classifiers.
+Exercise 3 – K-Nearest Neighbors (KNN)
 
----
+Steps:
 
-## Resources
-- Rosenblatt, F. (1958). *The Perceptron: A probabilistic model for information storage and organization in the brain*.  
-- Scikit-learn Documentation: [https://scikit-learn.org](https://scikit-learn.org)
+Train-test split (70% train, 30% test).
+Train KNN classifier (k = 3).
+Predict species and evaluate accuracy.
+
+# Key Insight
+
+KNN is a lazy learner – it stores data and classifies based on nearest neighbors.
+Performance depends on k value and feature scaling.
+
+Exercise 4 – Conceptual Knowledge
+ 
+# Supervised Learning
+
+Uses labeled data.
+Examples: Logistic Regression, KNN.
+
+Applications: spam detection, price prediction, medical diagnosis.
+
+# Unsupervised Learning
+
+Uses unlabeled data.
+Example: K-Means.
+
+Applications: customer segmentation, anomaly detection.
+
+# Reinforcement Learning
+
+Learns from feedback/rewards.
+Applications: robotics, game AI, self-driving cars.
+
+# Why Train-Test Split?
+
+Prevents overfitting (memorizing training data).
+Ensures the model can generalize to unseen data.
+Mimics real-world predictive tasks.
+
+# Factors Affecting Model Performance
+
+Dataset size & quality
+Feature selection
+Algorithm choice & hyperparameters
+
+
 
